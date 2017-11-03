@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>测试博客</title>
+  
+  <subtitle>这是一个副标题</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://hexo.idwuhan.com/"/>
+  <updated>2017-11-02T07:37:10.073Z</updated>
+  <id>http://hexo.idwuhan.com/</id>
+  
+  <author>
+    <name>huxiaoliang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://hexo.idwuhan.com/2017/11/02/hello-world/"/>
+    <id>http://hexo.idwuhan.com/2017/11/02/hello-world/</id>
+    <published>2017-11-02T06:54:52.000Z</published>
+    <updated>2017-11-02T07:37:10.073Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://hexo.idwuhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Hello" scheme="http://hexo.idwuhan.com/tags/Hello/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Teampass 密码管理系统配置部署</title>
+    <link href="http://hexo.idwuhan.com/2017/01/02/Teampass%20%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2/"/>
+    <id>http://hexo.idwuhan.com/2017/01/02/Teampass 密码管理系统配置部署/</id>
+    <published>2017-01-01T22:49:54.063Z</published>
+    <updated>2017-11-02T07:12:03.382Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.准备LAMP环境<br>   注意：PHP版本大于5.5</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum info php                                            #查看yum仓库PHP版本</div><div class="line">yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装</div></pre></td></tr></table></figure><p>2.安装PHP拓展</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">php-mcrypt</div><div class="line">php-mbstring</div><div class="line">php-bcmath</div><div class="line">php-iconv</div><div class="line">php-gd</div><div class="line">php-mysqlnd</div><div class="line">php-xml</div><div class="line">php-ldap</div><div class="line">mod_ssl</div></pre></td></tr></table></figure><p>3.修改PHP参数max_execution_time，默认为30</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php.ini  =&gt;  max_execution_time = 60</div></pre></td></tr></table></figure><p>4.配置数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mysql_secure_installation        #初始化mariadb安全配置，设置root密码，删除test库等</div><div class="line">mysql -uroot -p                        #新建teampass所需的库</div><div class="line">   create database teampass character set utf8 collate utf8_bin;</div><div class="line">   grant all privileges on teampass.* to teampass_admin@localhost identified by &apos;PASSWORD&apos;;</div></pre></td></tr></table></figure><p>5.配置TeamPass站点文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">https://github.com/nilsteampassnet/TeamPass/tags      #下载teampass最新版</div><div class="line">/opt/teampass                                  #新建teampass站点目录，并设置部分目录权限</div><div class="line">chown -R apache:apache teampass/</div><div class="line">chmod -R 0777 teampass/includes/config</div><div class="line">chmod -R 0777 teampass/includes/avatars</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/libs</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/log</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/js</div><div class="line">chmod -R 0777 teampass/backups</div><div class="line">chmod -R 0777 teampass/files</div><div class="line">chmod -R 0777 teampass/install</div><div class="line">chmod -R 0777 teampass/upload</div></pre></td></tr></table></figure><p>6.生成站点证书，这里使用Windows CA</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">openssl genrsa -out /etc/pki/tls/private/teampass.key                #生成证书key</div><div class="line">openssl req -new -key /etc/pki/tls/private/teampass.key -out  /etc/pki/tls/private/teampass.csr -days 730     #通过key生成csr注册信息</div><div class="line">cat teampass.csr                            #查看生成csr文件，并将内容粘贴到注册CA申请过程</div><div class="line">mv /etc/pki/tls/private/certnew.cer /etc/pki/tls/private/teampass.cer             #下载申请的证书，证书为cer格式，将cer格式转换为pem格式</div><div class="line">openssl x509 -inform der -in /etc/pki/tls/private/teampass.cer -out /etc/pki/tls/private/teampass.pem</div></pre></td></tr></table></figure><p>7.配置apache</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  DocumentRoot &quot;/opt/teampass&quot;</div><div class="line">  &lt;Directory &quot;/opt/teampass&quot;&gt;</div><div class="line">     SetOutputFilter DEFLATE</div><div class="line">     Options FollowSymLinks</div><div class="line">     AllowOverride All</div><div class="line">     Require all granted</div><div class="line">     DirectoryIndex index.php index.html index.htm default.php default.html default.htm</div><div class="line"> &lt;/Directory&gt;</div><div class="line">SSLEngine On</div><div class="line">SSLCertificateFile /opt/teampass/ssl/teampass.pem</div><div class="line">SSLCertificateKeyFile /opt/teampass/ssl/teampass.key</div><div class="line">SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH</div><div class="line">SSLProtocol All -SSLv2 -SSLv3</div><div class="line">SSLHonorCipherOrder On</div></pre></td></tr></table></figure><p>8.设置服务自动启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">systemctl enable mariadb-server</div><div class="line">systemctl enable php-fpm</div><div class="line">systemctl enable httpd</div></pre></td></tr></table></figure><p>9.访问WEB安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://$IP_ADDRESS</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.准备LAMP环境&lt;br&gt;   注意：PHP版本大于5.5&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum info php                                            #查看yum仓库PHP版本&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2.安装PHP拓展&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CentOS" scheme="http://hexo.idwuhan.com/categories/CentOS/"/>
+    
+    
+      <category term="teampass" scheme="http://hexo.idwuhan.com/tags/teampass/"/>
+    
+  </entry>
+  
+</feed>
