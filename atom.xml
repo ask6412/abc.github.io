@@ -43,9 +43,9 @@
     <link href="http://hexo.idwuhan.com/2017/10/09/%E6%B5%8B%E8%AF%95more%E6%A0%87%E7%AD%BE/"/>
     <id>http://hexo.idwuhan.com/2017/10/09/测试more标签/</id>
     <published>2017-10-09T01:55:00.000Z</published>
-    <updated>2017-11-09T04:37:57.355Z</updated>
+    <updated>2017-11-09T05:05:06.937Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/FAQ-%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89" target="_blank" rel="external">https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/FAQ-%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89</a>  </p><pre><code>&lt;!--more--&gt;</code></pre><p>  按照FAQ技巧测试MORE标签自动生成文章摘要<br>虽然会自动生成，并成功显示摘要内容，以及”阅读全文”标签<br>但摘要内容格式错乱，甚至会出现不存在的内容 </p><p><a href="https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/%E8%8D%A3%E8%AA%89%E4%BD%BF%E7%94%A8%E8%80%85-(User-List" target="_blank" rel="external">https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/%E8%8D%A3%E8%AA%89%E4%BD%BF%E7%94%A8%E8%80%85-(User-List</a>)</p><p>查看了部分使用者，发现大部分都存在该问题<br>暂时没有找到对应的解决方法</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/FAQ-%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89" target="_blank" rel="external">https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/FAQ-%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89</a>  </p><pre><code>&lt;!--more--&gt;</code></pre><p>  按照FAQ技巧测试MORE标签自动生成文章摘要<br>虽然会自动生成，并成功显示摘要内容，以及”阅读全文”标签<br>但摘要内容格式错乱，甚至会出现不存在的内容 </p><p><a href="https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/%E8%8D%A3%E8%AA%89%E4%BD%BF%E7%94%A8%E8%80%85-(User-List" target="_blank" rel="external">https://github.com/iTimeTraveler/hexo-theme-hiero/wiki/%E8%8D%A3%E8%AA%89%E4%BD%BF%E7%94%A8%E8%80%85-(User-List</a>)</p><p>查看了该主题使用者，发现大部分都存在该问题<br>暂时没有找到对应的解决方法</p>]]></content>
     
     <summary type="html">
     
