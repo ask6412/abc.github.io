@@ -121,6 +121,78 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-Teampass 密码管理系统配置部署"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/02/Teampass 密码管理系统配置部署/">Teampass 密码管理系统配置部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/11/02/Teampass 密码管理系统配置部署/" class="article-date">
+	  <time datetime="2017-11-01T22:49:00.000Z" itemprop="datePublished">十一月 2, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。
+
+1.准备LAMP环境   注意：PHP版本大于5.5
+yum info php                    #查看yum仓库PHP版本
+yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装
+2.安装PHP拓展php-mcrypt
+php-mbstring
+php-bcmath
+php-iconv
+php-gd
+php-mysqlnd
+php-xml
+php-ldap
+mod_ssl
+3.修改PHP参数max...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2017/11/02/Teampass 密码管理系统配置部署/#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/OPEN-SOURCE/">OPEN SOURCE</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TEAMPASS/">TEAMPASS</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-测试more标签"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -129,7 +201,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/09/测试more标签/">测试MORE标签</a>
+      <a class="article-title" href="/2017/10/09/测试more标签/">测试MORE标签</a>
     </h1>
   
 
@@ -137,8 +209,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/11/09/测试more标签/" class="article-date">
-	  <time datetime="2017-11-09T01:55:00.000Z" itemprop="datePublished">十一月 9, 2017</time>
+	Posted on <a href="/2017/10/09/测试more标签/" class="article-date">
+	  <time datetime="2017-10-09T01:55:00.000Z" itemprop="datePublished">十月 9, 2017</time>
 	</a>
 
       
@@ -161,76 +233,6 @@ var themeMenus = {};
       
   <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MORE/">MORE</a></li></ul>
-
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Teampass 密码管理系统配置部署"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/01/02/Teampass 密码管理系统配置部署/">Teampass 密码管理系统配置部署</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/01/02/Teampass 密码管理系统配置部署/" class="article-date">
-	  <time datetime="2017-01-01T22:49:00.000Z" itemprop="datePublished">一月 2, 2017</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-          
-            <div class="entry-summary" style="margin-left:0;">
-            TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。
-
-1.准备LAMP环境   注意：PHP版本大于5.5
-yum info php                                            #查看yum仓库PHP版本
-yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装
-2.安装PHP拓展php-mcrypt
-php-mbstring
-php-bcmath
-php-iconv
-php-gd
-php-mysqlnd
-php-xml
-php-l...
-          
-
-        
-          <p class="article-more-link">
-            <a href="/2017/01/02/Teampass 密码管理系统配置部署/#more">阅读全文</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/OPEN-SOURCE/">OPEN SOURCE</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TEAMPASS/">TEAMPASS</a></li></ul>
 
       
             
@@ -305,8 +307,8 @@ php-l...
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/11/09/测试more标签/">测试MORE标签</a></h6>
-              <span>十一月 9, 2017</span>
+              <h6 style="margin: 0;"><a href="/2017/11/02/Teampass 密码管理系统配置部署/">Teampass 密码管理系统配置部署</a></h6>
+              <span>十一月 2, 2017</span>
             </div>
 
           </li>
@@ -317,8 +319,8 @@ php-l...
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/01/02/Teampass 密码管理系统配置部署/">Teampass 密码管理系统配置部署</a></h6>
-              <span>一月 2, 2017</span>
+              <h6 style="margin: 0;"><a href="/2017/10/09/测试more标签/">测试MORE标签</a></h6>
+              <span>十月 9, 2017</span>
             </div>
 
           </li>
@@ -362,7 +364,7 @@ php-l...
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
