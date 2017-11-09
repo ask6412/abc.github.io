@@ -11,18 +11,20 @@
   
   
   
-  <meta name="description" content="1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装 2.安装PHP拓展">
+  <meta name="description" content="TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。 1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y h">
 <meta name="keywords" content="teampass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Teampass 密码管理系统配置部署">
 <meta property="og:url" content="http://hexo.idwuhan.com/2017/01/02/Teampass 密码管理系统配置部署/index.html">
 <meta property="og:site_name" content="测试博客">
-<meta property="og:description" content="1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装 2.安装PHP拓展">
+<meta property="og:description" content="TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。 1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y h">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-02T07:12:03.382Z">
+<meta property="og:image" content="http://hexo.idwuhan.com/images/pasted-0.png">
+<meta property="og:updated_time" content="2017-11-09T01:16:50.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Teampass 密码管理系统配置部署">
-<meta name="twitter:description" content="1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装 2.安装PHP拓展">
+<meta name="twitter:description" content="TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。 1.准备LAMP环境   注意：PHP版本大于5.5 12yum info php                                            #查看yum仓库PHP版本yum install -y h">
+<meta name="twitter:image" content="http://hexo.idwuhan.com/images/pasted-0.png">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -116,33 +118,6 @@ var themeMenus = {};
 </header>
 
 
-  <div id="originBgDiv" style="background: #fff; width: 100%;">
-
-      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
-        <img id="originBg" width="100%" alt="" src="">
-      </div>
-
-  </div>
-
-  <script>
-  function setAboutIMG(){
-      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
-      var random = Math.floor((Math.random() * imgUrls.length ));
-      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-        document.getElementById("originBg").src=imgUrls[random];
-      } else {
-        document.getElementById("originBg").src='/' + imgUrls[random];
-      }
-  }
-  bgDiv=document.getElementById("originBgDiv");
-  if(location.pathname.match('about')){
-    setAboutIMG();
-    bgDiv.style.display='block';
-  }else{
-    bgDiv.style.display='none';
-  }
-  </script>
-
 
 
   <div id="container">
@@ -167,7 +142,7 @@ var themeMenus = {};
     <div class="article-meta">
       
 	Posted on <a href="/2017/01/02/Teampass 密码管理系统配置部署/" class="article-date">
-	  <time datetime="2017-01-01T22:49:54.063Z" itemprop="datePublished">一月 2, 2017</time>
+	  <time datetime="2017-01-01T22:49:00.000Z" itemprop="datePublished">一月 2, 2017</time>
 	</a>
 
       
@@ -178,26 +153,17 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.准备LAMP环境<br>   注意：PHP版本大于5.5</p>
+        <p><img src="/images/pasted-0.png" alt="TEAMPASS"><br>TeamPass是一套密码管理系统，用于团队成员之间共享密码来进行协作管理。并为每个用户定义的访问权限，允许以有组织的方式管理您的密码和相关数据。支持开源协议AGPL3。</p>
+<h3 id="1-准备LAMP环境"><a href="#1-准备LAMP环境" class="headerlink" title="1.准备LAMP环境"></a>1.准备LAMP环境</h3><p>   注意：PHP版本大于5.5</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum info php                                            #查看yum仓库PHP版本</div><div class="line">yum install -y httpd php php-fpm mariadb-server openssl      #安装，默认apache已安装</div></pre></td></tr></table></figure>
-<p>2.安装PHP拓展</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">php-mcrypt</div><div class="line">php-mbstring</div><div class="line">php-bcmath</div><div class="line">php-iconv</div><div class="line">php-gd</div><div class="line">php-mysqlnd</div><div class="line">php-xml</div><div class="line">php-ldap</div><div class="line">mod_ssl</div></pre></td></tr></table></figure>
-<p>3.修改PHP参数max_execution_time，默认为30</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php.ini  =&gt;  max_execution_time = 60</div></pre></td></tr></table></figure>
-<p>4.配置数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mysql_secure_installation        #初始化mariadb安全配置，设置root密码，删除test库等</div><div class="line">mysql -uroot -p                        #新建teampass所需的库</div><div class="line">   create database teampass character set utf8 collate utf8_bin;</div><div class="line">   grant all privileges on teampass.* to teampass_admin@localhost identified by &apos;PASSWORD&apos;;</div></pre></td></tr></table></figure>
-<p>5.配置TeamPass站点文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">https://github.com/nilsteampassnet/TeamPass/tags      #下载teampass最新版</div><div class="line">/opt/teampass                                  #新建teampass站点目录，并设置部分目录权限</div><div class="line">chown -R apache:apache teampass/</div><div class="line">chmod -R 0777 teampass/includes/config</div><div class="line">chmod -R 0777 teampass/includes/avatars</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/libs</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/log</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/js</div><div class="line">chmod -R 0777 teampass/backups</div><div class="line">chmod -R 0777 teampass/files</div><div class="line">chmod -R 0777 teampass/install</div><div class="line">chmod -R 0777 teampass/upload</div></pre></td></tr></table></figure>
-<p>6.生成站点证书，这里使用Windows CA</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">openssl genrsa -out /etc/pki/tls/private/teampass.key                #生成证书key</div><div class="line">openssl req -new -key /etc/pki/tls/private/teampass.key -out  /etc/pki/tls/private/teampass.csr -days 730     #通过key生成csr注册信息</div><div class="line">cat teampass.csr                            #查看生成csr文件，并将内容粘贴到注册CA申请过程</div><div class="line">mv /etc/pki/tls/private/certnew.cer /etc/pki/tls/private/teampass.cer             #下载申请的证书，证书为cer格式，将cer格式转换为pem格式</div><div class="line">openssl x509 -inform der -in /etc/pki/tls/private/teampass.cer -out /etc/pki/tls/private/teampass.pem</div></pre></td></tr></table></figure>
-<p>7.配置apache</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  DocumentRoot &quot;/opt/teampass&quot;</div><div class="line">  &lt;Directory &quot;/opt/teampass&quot;&gt;</div><div class="line">     SetOutputFilter DEFLATE</div><div class="line">     Options FollowSymLinks</div><div class="line">     AllowOverride All</div><div class="line">     Require all granted</div><div class="line">     DirectoryIndex index.php index.html index.htm default.php default.html default.htm</div><div class="line"> &lt;/Directory&gt;</div><div class="line">SSLEngine On</div><div class="line">SSLCertificateFile /opt/teampass/ssl/teampass.pem</div><div class="line">SSLCertificateKeyFile /opt/teampass/ssl/teampass.key</div><div class="line">SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH</div><div class="line">SSLProtocol All -SSLv2 -SSLv3</div><div class="line">SSLHonorCipherOrder On</div></pre></td></tr></table></figure>
-<p>8.设置服务自动启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">systemctl enable mariadb-server</div><div class="line">systemctl enable php-fpm</div><div class="line">systemctl enable httpd</div></pre></td></tr></table></figure>
-<p>9.访问WEB安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://$IP_ADDRESS</div></pre></td></tr></table></figure>
-
+<h3 id="2-安装PHP拓展"><a href="#2-安装PHP拓展" class="headerlink" title="2.安装PHP拓展"></a>2.安装PHP拓展</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">def check_zxLogFileCheck(item, params, info):</div><div class="line">    warn, crit = params</div><div class="line">    for line in info:</div><div class="line">        data = line[0].split(&apos;|&apos;)</div><div class="line">        if data[0] == item:</div><div class="line">            offset = float(data[2])</div><div class="line">            perfdata = [ ( &quot;offset&quot;, offset, warn, crit ) ]</div><div class="line">            if offset &gt; crit:</div><div class="line">                return (2, &quot;Logfile is not update by %s second&quot; % offset, perfdata)</div><div class="line">            elif offset &gt; warn:</div><div class="line">                return (1, &quot;Logfile is not update by %s second&quot; % offset, perfdata)</div><div class="line">            else:</div><div class="line">                return (0, &quot;Update offset is %s second&quot; % offset, perfdata)</div><div class="line">    return (3, &quot;Unkown offset %s&quot; % float(data[2]))</div></pre></td></tr></table></figure>
+<h3 id="3-修改PHP参数max-execution-time，默认为30"><a href="#3-修改PHP参数max-execution-time，默认为30" class="headerlink" title="3.修改PHP参数max_execution_time，默认为30"></a>3.修改PHP参数max_execution_time，默认为30</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php.ini  =&gt;  max_execution_time = 60</div></pre></td></tr></table></figure>
+<h3 id="4-配置数据库"><a href="#4-配置数据库" class="headerlink" title="4.配置数据库"></a>4.配置数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mysql_secure_installation        #初始化mariadb安全配置，设置root密码，删除test库等</div><div class="line">mysql -uroot -p                        #新建teampass所需的库</div><div class="line">   create database teampass character set utf8 collate utf8_bin;</div><div class="line">   grant all privileges on teampass.* to teampass_admin@localhost identified by &apos;PASSWORD&apos;;</div></pre></td></tr></table></figure>
+<h3 id="5-配置TeamPass站点文件"><a href="#5-配置TeamPass站点文件" class="headerlink" title="5.配置TeamPass站点文件"></a>5.配置TeamPass站点文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">https://github.com/nilsteampassnet/TeamPass/tags      #下载teampass最新版</div><div class="line">/opt/teampass                                  #新建teampass站点目录，并设置部分目录权限</div><div class="line">chown -R apache:apache teampass/</div><div class="line">chmod -R 0777 teampass/includes/config</div><div class="line">chmod -R 0777 teampass/includes/avatars</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/libs</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/log</div><div class="line">chmod -R 0777 teampass/includes/libraries/csrfp/js</div><div class="line">chmod -R 0777 teampass/backups</div><div class="line">chmod -R 0777 teampass/files</div><div class="line">chmod -R 0777 teampass/install</div><div class="line">chmod -R 0777 teampass/upload</div></pre></td></tr></table></figure>
+<h3 id="6-生成站点证书，这里使用Windows-CA"><a href="#6-生成站点证书，这里使用Windows-CA" class="headerlink" title="6.生成站点证书，这里使用Windows CA"></a>6.生成站点证书，这里使用Windows CA</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">openssl genrsa -out /etc/pki/tls/private/teampass.key                #生成证书key</div><div class="line">openssl req -new -key /etc/pki/tls/private/teampass.key -out  /etc/pki/tls/private/teampass.csr -days 730     #通过key生成csr注册信息</div><div class="line">cat teampass.csr                            #查看生成csr文件，并将内容粘贴到注册CA申请过程</div><div class="line">mv /etc/pki/tls/private/certnew.cer /etc/pki/tls/private/teampass.cer             #下载申请的证书，证书为cer格式，将cer格式转换为pem格式</div><div class="line">openssl x509 -inform der -in /etc/pki/tls/private/teampass.cer -out /etc/pki/tls/private/teampass.pem</div></pre></td></tr></table></figure>
+<h3 id="7-配置apache"><a href="#7-配置apache" class="headerlink" title="7.配置apache"></a>7.配置apache</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">  DocumentRoot &quot;/opt/teampass&quot;</div><div class="line">  &lt;Directory &quot;/opt/teampass&quot;&gt;</div><div class="line">     SetOutputFilter DEFLATE</div><div class="line">     Options FollowSymLinks</div><div class="line">     AllowOverride All</div><div class="line">     Require all granted</div><div class="line">     DirectoryIndex index.php index.html index.htm default.php default.html default.htm</div><div class="line"> &lt;/Directory&gt;</div><div class="line">SSLEngine On</div><div class="line">SSLCertificateFile /opt/teampass/ssl/teampass.pem</div><div class="line">SSLCertificateKeyFile /opt/teampass/ssl/teampass.key</div><div class="line">SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH</div><div class="line">SSLProtocol All -SSLv2 -SSLv3</div><div class="line">SSLHonorCipherOrder On</div></pre></td></tr></table></figure>
+<h3 id="8-设置服务自动启动"><a href="#8-设置服务自动启动" class="headerlink" title="8.设置服务自动启动"></a>8.设置服务自动启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">systemctl enable mariadb-server</div><div class="line">systemctl enable php-fpm</div><div class="line">systemctl enable httpd</div></pre></td></tr></table></figure>
+<h3 id="9-访问WEB安装"><a href="#9-访问WEB安装" class="headerlink" title="9.访问WEB安装"></a>9.访问WEB安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://$IP_ADDRESS</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -276,7 +242,7 @@ var a = new Donate({
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav">无</ol>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备LAMP环境"><span class="nav-number">1.</span> <span class="nav-text">1.准备LAMP环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装PHP拓展"><span class="nav-number">2.</span> <span class="nav-text">2.安装PHP拓展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-修改PHP参数max-execution-time，默认为30"><span class="nav-number">3.</span> <span class="nav-text">3.修改PHP参数max_execution_time，默认为30</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置数据库"><span class="nav-number">4.</span> <span class="nav-text">4.配置数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-配置TeamPass站点文件"><span class="nav-number">5.</span> <span class="nav-text">5.配置TeamPass站点文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-生成站点证书，这里使用Windows-CA"><span class="nav-number">6.</span> <span class="nav-text">6.生成站点证书，这里使用Windows CA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-配置apache"><span class="nav-number">7.</span> <span class="nav-text">7.配置apache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-设置服务自动启动"><span class="nav-number">8.</span> <span class="nav-text">8.设置服务自动启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-访问WEB安装"><span class="nav-number">9.</span> <span class="nav-text">9.访问WEB安装</span></a></li></ol>
     
     </div>
   </aside>
@@ -288,16 +254,13 @@ var a = new Donate({
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2017 测试博客 All Rights Reserved.
+	      &copy; 2017 huxiaoliang All Rights Reserved.
           
             <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              <br>访客数<span id="busuanzi_value_site_uv"></span>人&nbsp;&nbsp;
+              访问量<span id="busuanzi_value_site_pv"></span>次</br>
             </span>
           
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
       </div>
   </div>
 </footer>
@@ -310,6 +273,7 @@ var a = new Donate({
 
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
 </script>
+
     </div>
     <!-- <nav id="mobile-nav">
   
