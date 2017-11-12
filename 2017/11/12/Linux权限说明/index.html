@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="##基本权限        a. 读 (r/4)         文件：允许用户打开文件，读取文件内容         目录：允许用户列出目录内容        b. 写 (w/2)         文件：允许用户修改文件内容         目录：允许用户在目录中创建/删除子对象        c. 执行(x/1)         文件：允许用户运行文件         目录：允许用户进入目录">
+  <meta name="description" content="基本权限a. 读 (r/4)    文件：允许用户打开文件，读取文件内容    目录：允许用户列出目录内容          b. 写 (w/2)    文件：允许用户修改文件内容    目录：允许用户在目录中创建/删除子对象   c. 执行(x/1)    文件：允许用户运行文件    目录：允许用户进入目录">
 <meta name="keywords" content="权限">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux权限说明">
 <meta property="og:url" content="http://hexo.idwuhan.com/2017/11/12/Linux权限说明/index.html">
 <meta property="og:site_name" content="OM NOTES">
-<meta property="og:description" content="##基本权限        a. 读 (r/4)         文件：允许用户打开文件，读取文件内容         目录：允许用户列出目录内容        b. 写 (w/2)         文件：允许用户修改文件内容         目录：允许用户在目录中创建/删除子对象        c. 执行(x/1)         文件：允许用户运行文件         目录：允许用户进入目录">
+<meta property="og:description" content="基本权限a. 读 (r/4)    文件：允许用户打开文件，读取文件内容    目录：允许用户列出目录内容          b. 写 (w/2)    文件：允许用户修改文件内容    目录：允许用户在目录中创建/删除子对象   c. 执行(x/1)    文件：允许用户运行文件    目录：允许用户进入目录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-12T07:05:16.115Z">
+<meta property="og:updated_time" content="2017-11-12T07:15:40.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux权限说明">
-<meta name="twitter:description" content="##基本权限        a. 读 (r/4)         文件：允许用户打开文件，读取文件内容         目录：允许用户列出目录内容        b. 写 (w/2)         文件：允许用户修改文件内容         目录：允许用户在目录中创建/删除子对象        c. 执行(x/1)         文件：允许用户运行文件         目录：允许用户进入目录">
+<meta name="twitter:description" content="基本权限a. 读 (r/4)    文件：允许用户打开文件，读取文件内容    目录：允许用户列出目录内容          b. 写 (w/2)    文件：允许用户修改文件内容    目录：允许用户在目录中创建/删除子对象   c. 执行(x/1)    文件：允许用户运行文件    目录：允许用户进入目录">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -151,9 +151,23 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##基本权限<br>        a. 读 (r/4)<br>         文件：允许用户打开文件，读取文件内容<br>         目录：允许用户列出目录内容<br>        b. 写 (w/2)<br>         文件：允许用户修改文件内容<br>         目录：允许用户在目录中创建/删除子对象<br>        c. 执行(x/1)<br>         文件：允许用户运行文件<br>         目录：允许用户进入目录  </p>
-<p>##特殊权限<br>        a. suid (u+s/4)<br>         应用于可执行文件，设置使文件在执行过程中具备文件所有者的权限<br>        b. sgid (g+s/2)<br>         应用于目录或可执行文件，应用于目录时，设置目录下所有文件或子目录为目录的所有组，应用于可执行文件时，设置使文件在执行过程中具备文件所有组的权限<br>        c. 粘着位 (o+t/1)<br>        应用于目录，设置目录下所有子目录或文件，只有root和文件所有者能删除</p>
-
+        <h2 id="基本权限"><a href="#基本权限" class="headerlink" title="基本权限"></a>基本权限</h2><pre><code>a. 读 (r/4)  
+ 文件：允许用户打开文件，读取文件内容  
+ 目录：允许用户列出目录内容         
+b. 写 (w/2)  
+ 文件：允许用户修改文件内容  
+ 目录：允许用户在目录中创建/删除子对象  
+c. 执行(x/1)  
+ 文件：允许用户运行文件  
+ 目录：允许用户进入目录  
+</code></pre><a id="more"></a>
+<h2 id="特殊权限"><a href="#特殊权限" class="headerlink" title="特殊权限"></a>特殊权限</h2><pre><code>a. suid (u+s/4)  
+ 应用于可执行文件，设置使文件在执行过程中具备文件所有者的权限  
+b. sgid (g+s/2)  
+ 应用于目录或可执行文件，应用于目录时，设置目录下所有文件或子目录为目录的所有组，应用于可执行文件时，设置使文件在执行过程中具备文件所有组的权限   
+c. 粘着位 (o+t/1)  
+应用于目录，设置目录下所有子目录或文件，只有root和文件所有者能删除
+</code></pre>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -228,7 +242,7 @@ var a = new Donate({
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav">无</ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本权限"><span class="nav-number">1.</span> <span class="nav-text">基本权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊权限"><span class="nav-number">2.</span> <span class="nav-text">特殊权限</span></a></li></ol>
     
     </div>
   </aside>
