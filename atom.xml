@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hexo.idwuhan.com/"/>
-  <updated>2017-11-09T04:38:14.783Z</updated>
+  <updated>2017-11-12T07:05:16.115Z</updated>
   <id>http://hexo.idwuhan.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux权限说明</title>
+    <link href="http://hexo.idwuhan.com/2017/11/12/Linux%E6%9D%83%E9%99%90%E8%AF%B4%E6%98%8E/"/>
+    <id>http://hexo.idwuhan.com/2017/11/12/Linux权限说明/</id>
+    <published>2017-11-12T07:02:00.000Z</published>
+    <updated>2017-11-12T07:05:16.115Z</updated>
+    
+    <content type="html"><![CDATA[<p>##基本权限<br>        a. 读 (r/4)<br>         文件：允许用户打开文件，读取文件内容<br>         目录：允许用户列出目录内容<br>        b. 写 (w/2)<br>         文件：允许用户修改文件内容<br>         目录：允许用户在目录中创建/删除子对象<br>        c. 执行(x/1)<br>         文件：允许用户运行文件<br>         目录：允许用户进入目录  </p><p>##特殊权限<br>        a. suid (u+s/4)<br>         应用于可执行文件，设置使文件在执行过程中具备文件所有者的权限<br>        b. sgid (g+s/2)<br>         应用于目录或可执行文件，应用于目录时，设置目录下所有文件或子目录为目录的所有组，应用于可执行文件时，设置使文件在执行过程中具备文件所有组的权限<br>        c. 粘着位 (o+t/1)<br>        应用于目录，设置目录下所有子目录或文件，只有root和文件所有者能删除</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##基本权限&lt;br&gt;        a. 读 (r/4)&lt;br&gt;         文件：允许用户打开文件，读取文件内容&lt;br&gt;         目录：允许用户列出目录内容&lt;br&gt;        b. 写 (w/2)&lt;br&gt;         文件：允许用户修改文件内容&lt;br&gt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://hexo.idwuhan.com/categories/Linux/"/>
+    
+    
+      <category term="权限" scheme="http://hexo.idwuhan.com/tags/%E6%9D%83%E9%99%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Teampass 密码管理系统配置部署</title>
